@@ -1,0 +1,288 @@
+<title>SORA</title>
+<style>
+@font-face{font-family:Anton;src:url(heros-bold.otf)}
+@font-face{font-family:Poppins;font-weight:500;src:url(heros-regular.otf)}@font-face{font-family:Poppins;font-weight:700;src:url(heros-bold.otf)}
+:root{--ink:#000000;--white:#fff;--soft:#F6F5F1;--line:#1819181f;
+--raspberry:#FF2470;--pink:#FF6ECB;--orange:#FF4A00;--golden:#FFB91F;--lemon:#FFE21A;--purple:#5F00FF;--lavender:#A57BFF;--blue:#1446FF;--sky:#3F90FF;--green:#14D968}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--white);color:var(--ink);font:500 16px/1.55 Poppins,Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.w{max-width:1200px;margin:0 auto;padding:0 max(16px,4vw)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:6px 0 4px;font-size:17px;color:var(--ink);background:none;border:0;border-bottom:2px solid var(--ink);cursor:pointer;transition:gap .25s,opacity .2s}
+.btn:hover{gap:14px}
+.btn.g{border-bottom-color:transparent;text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:6px}
+.btn.solid{border:0;border-radius:99px;padding:12px 26px;background:var(--ink);color:#fff;font-size:15px}
+.btn.s{padding:8px 16px;font-size:14px}
+h1,h2{font-family:Anton,Impact,sans-serif;font-weight:400;letter-spacing:.005em;line-height:.95}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;padding:6px 14px 6px 8px;border-radius:99px;background:var(--soft)}
+.eyebrow i{width:18px;height:18px;border-radius:50%;background:var(--green)}
+
+/* nav */
+nav.top{position:sticky;top:0;z-index:10;background:#ffffffee;backdrop-filter:blur(10px)}
+nav.top .w{display:flex;align-items:center;justify-content:space-between;height:68px}
+nav.top b{font:400 28px Anton;letter-spacing:.03em;display:flex;align-items:center;gap:10px}
+nav.top b img{width:30px;height:30px;border-radius:8px}
+nav.top .links{display:flex;gap:28px;font-size:14px}
+nav.top .r{display:flex;gap:8px}
+
+/* hero */
+.hero{position:relative;text-align:center;padding:96px 0 0;overflow:hidden}
+.hero h1{font-size:clamp(64px,10vw,150px);margin:24px auto 0;max-width:12ch}
+.hero p{font-size:19px;max-width:40ch;margin:22px auto 0}
+.hero .cta{display:flex;gap:36px;justify-content:center;margin-top:30px}
+.field{position:relative;height:clamp(260px,34vw,420px);margin-top:56px}
+.field img{position:absolute;bottom:-12%;height:115%;width:auto}
+.field .f1{left:-3%;height:95%} .field .f2{left:20%;height:120%;bottom:-30%} .field .f3{left:46%;height:100%;bottom:-20%} .field .f4{right:16%;height:115%;bottom:-25%} .field .f5{right:-4%;height:100%}
+
+/* intro + video */
+.sec{padding:110px 0 0}
+.center{text-align:center}
+.sec h2{font-size:clamp(44px,6vw,84px)}
+.sec .lead{font-size:18px;max-width:46ch;margin:18px auto 0}
+.video{margin-top:44px;border-radius:28px;overflow:hidden;position:relative;background:var(--soft);box-shadow:inset 0 0 0 1px var(--line);aspect-ratio:16/9;display:flex;align-items:center;justify-content:center}
+.video img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.video .play{position:relative;width:84px;height:84px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 2px var(--ink)}
+
+/* features */
+.feat{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:56px}
+.feat div{color:#fff;border-radius:24px;padding:24px;min-height:220px;display:flex;flex-direction:column;justify-content:space-between;background:var(--soft);position:relative;overflow:hidden}
+.feat img{height:110px;width:auto;align-self:flex-start}
+.feat b{display:block;font:400 30px/1 Anton;margin-top:16px}
+.feat p{font-size:14px;margin-top:8px}
+
+/* how */
+.how{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center;margin-top:52px}
+.how .pic{border-radius:28px;background:var(--soft);padding:36px 28px 0;display:flex;gap:16px;justify-content:center;align-items:flex-end;overflow:hidden;height:520px}
+.how .pic img{width:31%;border-radius:22px 22px 0 0;box-shadow:0 0 0 5px var(--ink);aspect-ratio:402/874;object-fit:cover;object-position:top}
+.how .pic img:nth-child(2){margin-bottom:-40px}
+.steps{display:grid;gap:4px}
+.step{display:grid;grid-template-columns:48px 1fr;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}
+.step i{font:400 34px/1 Anton;font-style:normal}
+.step b{display:block;font-size:19px}
+.step p{font-size:14.5px;margin-top:2px}
+
+/* templates grid */
+.th{display:flex;justify-content:space-between;align-items:end;gap:16px}
+.th a{font-size:15px;border-bottom:1.5px solid var(--ink)}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px}
+.card .im{border-radius:20px;overflow:hidden;aspect-ratio:4/5;background:var(--soft)}
+.card .im img{width:100%;height:100%;object-fit:cover}
+.card b{display:block;font-size:16px;margin-top:12px}
+.card span{font-size:13.5px}
+
+/* faq */
+.faq{max-width:780px;margin:44px auto 0}
+.q{border-bottom:1px solid var(--line)}
+.q summary{list-style:none;display:flex;justify-content:space-between;align-items:center;padding:22px 0;font-size:18px;cursor:pointer}
+.q summary::-webkit-details-marker{display:none}
+.q summary::after{content:"+";font-size:26px;line-height:1}
+.q[open] summary::after{content:"–"}
+.q p{padding:0 0 22px;font-size:15px;max-width:60ch}
+
+/* close */
+.close{margin:0;text-align:center;padding:150px 20px 60px}
+.close h2{font-size:clamp(52px,8vw,120px);max-width:11ch;margin:0 auto}
+.close .btn{margin-top:34px}
+.close img{position:absolute;bottom:-60px;height:300px;width:auto}
+
+footer{padding:72px 0 48px}
+footer .w{display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:24px;font-size:14px}
+footer b{font:400 30px Anton}
+footer h4{font-weight:500;font-size:13px;margin-bottom:10px}
+footer li{list-style:none;margin-bottom:6px}
+.close{padding:145px 20px 65px}.close h2{position:relative;top:-.172em}/* the line sits exactly in the middle between the last question and the footer (Noa, 18.11) */
+footer .bot{grid-column:1/-1;display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:22px;margin-top:30px;font-size:13px}
+
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+.badge{font:500 11px Poppins;letter-spacing:.1em;background:var(--lemon);border-radius:99px;padding:3px 9px;margin-left:4px}
+nav.top .links a:hover,.th a:hover,footer a:hover{opacity:.6}
+.video{cursor:pointer}
+.video video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#000;display:none}
+.video.on video{display:block}.video.on .play,.video.on img{display:none}
+.card{cursor:pointer}.card .im{transition:transform .35s cubic-bezier(.2,.9,.3,1)}.card:hover .im{transform:translateY(-4px)}
+.phone{width:min(330px,80%);aspect-ratio:390/844;flex:none;border-radius:44px;overflow:hidden;box-shadow:0 0 0 8px var(--ink);background:#fff;margin:0 auto}
+.phone iframe{width:100%;height:100%;border:0;display:block}
+.how .pic{height:auto;padding:36px 20px;align-items:center;flex-direction:column;gap:14px}
+.how .pic small{font-size:13px}
+.marq{position:relative;height:clamp(220px,28vw,380px);margin-top:56px;overflow:hidden}
+.mtrack{display:flex;width:max-content;height:100%;animation:slide 48s linear infinite}
+.mset{display:flex;align-items:center;gap:clamp(40px,5vw,90px);padding-right:clamp(40px,5vw,90px);height:100%}
+.mset img{height:var(--h);width:auto;flex:none;animation:bob 6s ease-in-out infinite;animation-delay:calc(var(--d)*-1)}
+@keyframes slide{to{transform:translateX(-50%)}}
+@keyframes bob{0%,100%{transform:translateY(-4%) rotate(-3deg)}50%{transform:translateY(4%) rotate(3deg)}}
+.marq:hover .mtrack{animation-play-state:paused}
+/* marketing objects: its own band */
+.objs{margin:110px 0 0;background:var(--soft);padding:96px 0 104px}
+.objs .tag{display:inline-block;font-size:13px;letter-spacing:.14em;margin-bottom:14px}
+.objs h2{font-size:clamp(52px,7.5vw,108px)}
+.objs .lead{font-size:18px;max-width:44ch;margin-top:16px}
+.ogrid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:44px}
+.obj{background:#fff;border-radius:24px;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;transition:transform .35s cubic-bezier(.2,.9,.3,1)}
+.obj:hover{transform:translateY(-4px)}
+.obj .im{aspect-ratio:4/3;overflow:hidden;background:#FBF8F1}
+.obj .im img{width:100%;height:100%;object-fit:cover}
+.obj .tx{padding:18px 20px 20px;display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
+.obj b{display:block;font:400 30px/1 Anton}
+.obj span{font-size:13.5px}
+.obj em{font-style:normal;font-size:13px;white-space:nowrap;border-bottom:1.5px solid var(--ink)}
+.lb .nav2{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:8px}
+.lb .nav2 button{position:static;width:auto;height:auto;padding:8px 16px;border-radius:99px;font:500 14px Poppins}
+/* manager: the green dot */
+.door{position:fixed;left:max(20px,env(safe-area-inset-left,0px));bottom:calc(max(16px,env(safe-area-inset-bottom,0px)) + 18px);z-index:40;width:16px;height:16px;border-radius:50%;border:0;padding:0;background:var(--green);cursor:pointer}
+.door::after{content:"";position:absolute;inset:-12px}
+.gate{position:fixed;inset:0;z-index:60;background:#ffffffee;backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:16px}
+.gate[hidden]{display:none}
+.gate form{display:grid;gap:14px;justify-items:center;text-align:center;width:min(320px,100%)}
+.gate .k{font:400 64px/1 Anton}
+.gate label{font-size:12px;letter-spacing:.14em}
+.gate input{width:100%;font:500 18px Poppins;padding:13px 18px;border:2px solid var(--ink);border-radius:99px;text-align:center}
+.gate .x{position:absolute;top:16px;right:16px;background:none;border:0;font-size:30px;cursor:pointer}
+.gate .err{font-size:13px;min-height:1.4em}
+@media(prefers-reduced-motion:reduce){.mtrack,.mset img{animation:none}}
+.lb{position:fixed;inset:0;z-index:50;background:#181918e6;display:flex;align-items:center;justify-content:center;padding:24px}
+.lb[hidden]{display:none}.lb img{max-height:90vh;max-width:100%;border-radius:12px;background:#fff}
+.lb button{position:absolute;top:16px;right:16px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;font-size:24px;cursor:pointer}
+@media(prefers-reduced-motion:reduce){.field img{transition:none}}
+@media(max-width:820px){
+  nav.top .links,nav.top .r .g{display:none}
+  .hero{padding-top:56px}.hero p{font-size:16px}
+  .feat,.cards{grid-template-columns:1fr 1fr}
+  .how{grid-template-columns:1fr}.how .pic{height:auto}
+  footer .w{grid-template-columns:1fr 1fr}
+  .sec{padding-top:80px}
+}
+
+/* titles: TeX Gyre Heros Bold, after the graphis 226 masthead (Funabashi's cover): lowercase, tight; text stays Poppins (Noa, 18.11) */
+h1,h2{letter-spacing:-.045em;line-height:.95;text-transform:lowercase}
+.hero h1{font-size:clamp(50px,7.6vw,112px)}
+.sec h2{font-size:clamp(32px,4.2vw,58px)}
+.close h2{font-size:clamp(40px,5.6vw,84px)}
+.objs h2{font-size:clamp(36px,5vw,74px)}
+nav.top b{font-size:24px;letter-spacing:-.04em;text-transform:lowercase}
+.feat b,.obj b{font-size:22px;line-height:1.15;letter-spacing:-.03em;text-transform:lowercase}
+.step i{font-size:26px}
+footer b{font-size:24px;letter-spacing:-.04em;text-transform:lowercase}
+.gate .k{font-size:48px}
+.video.tall{aspect-ratio:9/16;max-width:420px;margin-left:auto;margin-right:auto}
+body{color:#000}
+.video .play{background:none;box-shadow:none;border-radius:0}.video .play svg{width:64px;height:64px}
+</style>
+
+<nav class="top"><div class="w">
+  <a href="#top" style="display:flex"><b>sora</b></a>
+  <div class="links"><a href="#idea">Idea</a><a href="#how">How it works</a><a href="#skies">Skies</a><a href="#objects">Objects</a><a href="#faq">FAQ</a></div>
+</div></nav>
+
+<header class="hero" id="top"><div class="w">
+  <span class="eyebrow"><i></i>A weather app · coming spring 2027</span>
+  <h1>The sky in one shape</h1>
+  <p>SORA shows the weather one piece at a time: one shape, one word, one number.</p>
+  <div class="cta"><a class="btn" href="app/index.html">Open the app →</a><a class="btn g" href="#idea" data-play>Watch the teaser</a></div>
+</div>
+  <div class="marq" aria-hidden="true"><div class="mtrack"><div class="mset"><img src="el-rain.png" alt="" style="--d:0.0s;--h:78%"><img src="el-temp.png" alt="" style="--d:0.7s;--h:92%"><img src="el-uv.png" alt="" style="--d:1.4s;--h:80%"><img src="el-wind.png" alt="" style="--d:2.1s;--h:88%"><img src="el-temp.png" alt="" style="--d:2.8s;--h:76%"><img src="el-uv.png" alt="" style="--d:3.5s;--h:90%"><img src="el-rain.png" alt="" style="--d:4.2s;--h:84%"><img src="el-wind.png" alt="" style="--d:4.9s;--h:80%"></div><div class="mset"><img src="el-rain.png" alt="" style="--d:0.0s;--h:78%"><img src="el-temp.png" alt="" style="--d:0.7s;--h:92%"><img src="el-uv.png" alt="" style="--d:1.4s;--h:80%"><img src="el-wind.png" alt="" style="--d:2.1s;--h:88%"><img src="el-temp.png" alt="" style="--d:2.8s;--h:76%"><img src="el-uv.png" alt="" style="--d:3.5s;--h:90%"><img src="el-rain.png" alt="" style="--d:4.2s;--h:84%"><img src="el-wind.png" alt="" style="--d:4.9s;--h:80%"></div></div></div>
+</header>
+
+<section class="sec center" id="idea"><div class="w">
+  <h2>Weather, one piece at a time</h2>
+  <p class="lead">Most weather apps show everything at once. SORA picks one shape from nature for the day and lets you read it from across the room.</p>
+  <div class="video" id="video" role="button" tabindex="0" aria-label="Play the teaser"><video src="teaser.mp4" playsinline controls preload="none"></video><img src="teaser-still.jpg" alt="" id="vstill"><span class="play"><svg viewBox="0 0 24 24" width="34" height="34"><path d="M8 5.2v13.6c0 .8.9 1.3 1.6.9l10.6-6.8c.6-.4.6-1.3 0-1.7L9.6 4.3C8.9 3.9 8 4.4 8 5.2z" fill="#181918"/></svg></span></div>
+  <div class="feat" style="text-align:left">
+    <div style="background:var(--sky)"><img src="el-temp.png" alt=""><span><b>Tap</b><p>Change the reading: TEMP, UV, WIND, RAIN.</p></span></div>
+    <div style="background:var(--purple)"><img src="el-uv.png" alt=""><span><b>Drag</b><p>Pull NOW through the next 10 hours.</p></span></div>
+    <div style="background:var(--golden)"><img src="el-wind.png" alt=""><span><b>Swipe</b><p>See the next 7 days, each with its shape.</p></span></div>
+    <div style="background:var(--pink)"><img src="el-rain.png" alt=""><span><b>Night</b><p>After sunset the app turns to night by itself.</p></span></div>
+  </div>
+</div></section>
+
+<section class="sec" id="how"><div class="w">
+  <div class="center"><h2>How it works</h2><p class="lead">Open it in the morning. One look, and you know how the day will feel.</p></div>
+  <div class="how">
+    <div class="pic"><div class="phone"><iframe src="app/index.html" title="SORA, live" loading="lazy"></iframe></div><small>The real app: tap, drag, swipe.</small></div>
+    <div class="steps">
+      <div class="step"><i>1</i><span><b>Open SORA</b><p>The pieces fly in and land: TODAY, NOW and the temperature.</p></span></div>
+      <div class="step"><i>2</i><span><b>Read the shape</b><p>Suns, flower, birds or waves: the day's high picks it.</p></span></div>
+      <div class="step"><i>3</i><span><b>Tap for more</b><p>UV, wind and rain, one at a time. The shape stays.</p></span></div>
+      <div class="step"><i>4</i><span><b>Look ahead</b><p>Drag through today's hours, swipe through the week.</p></span></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec" id="skies"><div class="w">
+  <div class="th"><h2>Discover the skies</h2></div>
+  <div class="cards">
+    <div class="card" data-href="app/index.html"><div class="im"><img src="d-sun.jpg" alt=""></div><b>The suns</b><span>26° and up</span></div>
+    <div class="card" data-href="app/index.html"><div class="im"><img src="d-flower.jpg" alt=""></div><b>The flower</b><span>21–25°</span></div>
+    <div class="card" data-href="app/index.html"><div class="im"><img src="d-birds.jpg" alt=""></div><b>The birds</b><span>15–20°</span></div>
+    <div class="card" data-href="app/index.html"><div class="im"><img src="d-rain.jpg" alt=""></div><b>The waves</b><span>14° and below</span></div>
+    </div>
+</div></section>
+
+
+<section class="objs" id="objects"><div class="w">
+  <span class="tag">MARKETING OBJECTS</span>
+  <h2>sora off the screen</h2>
+  <p class="lead">Print, paper and small things to keep. Each one carries a shape and leads back to the app.</p>
+  <div class="ogrid">
+    <div class="obj" data-gal="posters"><div class="im"><img src="poster-g1.jpg" alt="SORA poster: TAP, with a QR code to the app" style="object-position:top"></div><div class="tx"><span><b>Posters</b>One for each gesture, with a QR to the app</span><em>View 4</em></div></div>
+    <div class="obj" data-out="https://claude.ai/artifact/CvYagG3BGwMEvkorRmsHhX"><div class="im"><img src="cal.jpg" alt="SORA calendar, May" style="object-position:top"></div><div class="tx"><span><b>Calendar 2027</b>12 months, 12 skies</span><em>Open ↗</em></div></div>
+    <div class="obj" data-gal="stickers"><div class="im"><img src="obj/st/cover.jpg" alt="SORA sticker sheet: the four skies" style="object-position:top"></div><div class="tx"><span><b>Stickers</b>Seven sheets, one for every sky</span><em>View 7</em></div></div>
+    <div class="obj" data-gal="pens"><div class="im"><img src="obj/pens.jpg" alt="SORA pens"></div><div class="tx"><span><b>Pens</b>One pen for every sky</span><em>View</em></div></div>
+  </div>
+</div></section>
+
+<section class="sec" id="faq"><div class="w">
+  <h2 class="center">Questions</h2>
+  <div class="faq">
+    <details class="q" open><summary>What is SORA?</summary><p>A weather app that shows one piece of the weather at a time, as one shape from nature, one word and one number.</p></details>
+    <details class="q"><summary>Where does the weather come from?</summary><p>Real numbers for Tel Aviv, updated through the day.</p></details>
+    <details class="q"><summary>Why shapes?</summary><p>After the cut-paper work of Zenji Funabashi: flat colour, nature as a sign. <a href="designer/index.html" style="text-decoration:underline">More about him</a>.</p></details>
+    <details class="q"><summary>When does it come out?</summary><p>Spring 2027, on the App Store and Google Play.</p></details>
+    <details class="q"><summary>Can I try it now?</summary><p>Yes: tap “Open the app” at the top, or try it right here in “How it works”.</p></details>
+  </div>
+</div></section>
+
+<section class="close">
+  <h2>Ready to see your sky?</h2>
+</section>
+
+<footer><div class="w">
+  <div><b>SORA</b><p style="font-size:14px;margin-top:6px">Weather, one piece at a time.</p></div>
+  <div><h4>App</h4><ul><li><a href="#idea" data-play>Teaser</a></li></ul></div>
+  <div><h4>Skies</h4><ul><li><a href="#skies">Suns</a></li><li><a href="#skies">Flower</a></li><li><a href="#skies">Birds</a></li><li><a href="#skies">Waves</a></li></ul></div>
+  <div><h4>Objects</h4><ul><li><a href="#objects">Posters</a></li><li><a href="#objects">Stickers and pens</a></li><li><a href="https://claude.ai/artifact/CvYagG3BGwMEvkorRmsHhX" target="_blank" rel="noopener">Calendar 2027</a></li></ul></div>
+  <div><h4>About</h4><ul><li><a href="designer/index.html">The designer</a></li></ul></div>
+  <div class="bot"><span>Design Noa Kaplan · After Zenji Funabashi</span></div>
+</div></footer>
+
+
+<div class="lb" id="lb" hidden role="dialog" aria-label="Gallery"><button type="button" class="lbx" aria-label="Close">×</button><img alt=""><div class="nav2"><button type="button" data-step="-1">‹ Prev</button><button type="button" data-step="1">Next ›</button></div></div>
+<button class="door" id="door" type="button" aria-label="Manager"></button>
+<div class="gate" id="gate" hidden><button class="x" id="gx" type="button" aria-label="Close">×</button>
+  <form id="gf" autocomplete="off"><span class="k">空</span><label for="pw">MANAGER · SYSTEM BOOK</label><input id="pw" type="password" placeholder="Password"><button class="btn solid" type="submit">OPEN</button><p class="err" id="perr" role="status"></p></form></div>
+<script>
+(function(){
+    var v=document.getElementById("video"),vid=v.querySelector("video");
+    /* the teaser: upright phone = the phone cut (9:16); turned sideways, or on a computer = the wide cut (16:9). It keeps playing from the same moment */
+    var mqP=window.matchMedia("(max-width: 700px) and (orientation: portrait)");
+    function pickCut(){var ph=mqP.matches,src=ph?"teaser-phone.mp4":"teaser.mp4";v.classList.toggle("tall",ph);document.getElementById("vstill").src=ph?"teaser-still-phone.jpg":"teaser-still.jpg";
+      if(vid.getAttribute("src")!==src){var t=vid.currentTime||0,was=!vid.paused;vid.setAttribute("src",src);if(t){vid.addEventListener("loadedmetadata",function on(){vid.removeEventListener("loadedmetadata",on);try{vid.currentTime=t}catch(e){}if(was)vid.play().catch(function(){});});vid.load();}}}
+    pickCut();(mqP.addEventListener?mqP.addEventListener("change",pickCut):mqP.addListener(pickCut));
+  function play(){v.classList.add("on");try{vid.play()}catch(e){}}
+  v.addEventListener("click",function(){if(!v.classList.contains("on"))play()});
+  v.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();play()}});
+  document.querySelectorAll("[data-play]").forEach(function(a){a.addEventListener("click",function(){setTimeout(play,450)})});
+  var GAL={posters:["poster-g1.jpg","poster-g2.jpg","poster-g3.jpg","poster-g4.jpg"],stickers:["obj/st/sheet-1.jpg","obj/st/sheet-2.jpg","obj/st/sheet-3.jpg","obj/st/sheet-4.jpg","obj/st/sheet-5.jpg","obj/st/sheet-6.jpg","obj/st/sheet-7.jpg"],pens:["obj/pens.jpg"]};
+  var lb=document.getElementById("lb"),li=lb.querySelector("img"),nav2=lb.querySelector(".nav2"),cur=[],ci=0;
+  function show(){li.src=cur[ci];nav2.style.display=cur.length>1?"flex":"none";}
+  function openLb(list,i){cur=list;ci=i||0;show();lb.hidden=false;lb.querySelector(".lbx").focus();}
+  lb.addEventListener("click",function(e){var st=e.target.getAttribute("data-step");if(st){ci=(ci+ +st+cur.length)%cur.length;show();return;}if(e.target!==li)lb.hidden=true;});
+  addEventListener("keydown",function(e){if(lb.hidden)return;if(e.key==="Escape")lb.hidden=true;if(e.key==="ArrowRight"){ci=(ci+1)%cur.length;show()}if(e.key==="ArrowLeft"){ci=(ci-1+cur.length)%cur.length;show()}});
+  document.querySelectorAll(".card,.obj").forEach(function(c){c.tabIndex=0;c.setAttribute("role","link");function go(){if(c.dataset.href)location.href=c.dataset.href;else if(c.dataset.gal)openLb(GAL[c.dataset.gal],0);else if(c.dataset.out)window.open(c.dataset.out,"_blank","noopener")}c.addEventListener("click",go);c.addEventListener("keydown",function(e){if(e.key==="Enter")go()})});
+  /* manager: green dot, password, then the system book */
+  var gate=document.getElementById("gate"),pw=document.getElementById("pw"),perr=document.getElementById("perr");
+  document.getElementById("door").addEventListener("click",function(){gate.hidden=false;pw.value="";perr.textContent="";setTimeout(function(){pw.focus()},50)});
+  document.getElementById("gx").addEventListener("click",function(){gate.hidden=true});
+  document.getElementById("gf").addEventListener("submit",function(e){e.preventDefault();if(pw.value.trim().toLowerCase()==="sora"){location.href="system/index.html"}else{perr.textContent="Not quite. Try again.";pw.select()}});
+})();
+</script>
