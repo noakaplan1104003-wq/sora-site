@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Zenji Funabashi · SORA</title>
+<style>
+@font-face{font-family:"Anton";font-weight:400;src:url("fonts/heros-bold.otf");font-display:swap}
+@font-face{font-family:"Poppins";font-weight:500;src:url("fonts/heros-regular.otf");font-display:swap}
+:root{color-scheme:light;--ink:#000000;--line:#18191820;--gut:max(18px,env(safe-area-inset-left,0px))}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#fff;color:var(--ink);font:500 15px/1.55 "Poppins",Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+img{display:block}
+.col{max-width:720px;margin:0 auto;padding:0 var(--gut)}
+.hdr{position:sticky;top:0;z-index:10;background:#fffffff5;backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.hdr .col{display:flex;justify-content:space-between;align-items:center;height:52px}
+.hdr b{font:400 24px/1 "Anton",Impact,sans-serif;letter-spacing:.03em;display:flex;align-items:center;gap:8px}
+.hdr b img{height:22px;width:auto}
+.hdr a{font-size:13px;text-decoration:none}
+.eyebrow{font-size:12px;letter-spacing:.14em}
+
+/* who */
+.who{padding:40px 0 0;position:relative}
+.who h1{font:400 clamp(84px,26vw,190px)/.88 "Anton",Impact,sans-serif;margin-top:12px;letter-spacing:.005em}
+.who .yrs{font-size:20px;margin-top:18px}
+.who p{font-size:17px;margin-top:16px;max-width:36ch}
+.works{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px}
+.works figure{margin:0}
+.works img{width:100%;aspect-ratio:5/7;object-fit:cover;border-radius:14px;box-shadow:0 0 0 1px var(--line);background:#fff}
+.works figcaption{font-size:12.5px;line-height:1.35;margin-top:8px}
+.works figcaption b{display:block;font-weight:500;font-size:13.5px}
+@media (min-width:700px){.works{grid-template-columns:repeat(4,1fr)}}
+
+/* period */
+.period{padding:72px 0 24px}
+.tl{position:relative;padding-left:30px;margin-top:26px}
+.tl::before{content:"";position:absolute;left:5px;top:10px;bottom:10px;width:1.2px;background:var(--ink)}
+.yr{position:relative;padding:14px 0;transition:opacity .35s}
+.yr i{position:absolute;left:-25px;top:27px;width:8px;height:1.2px;background:var(--ink);transition:width .35s}
+.yr b{display:block;font-weight:500;font-size:16px;line-height:1;letter-spacing:-.02em;transition:font-size .35s cubic-bezier(.2,.9,.3,1)}
+.yr span{display:block;font-size:14px;margin-top:6px;transition:opacity .35s}
+.yr.on b{font-size:40px}
+.yr.on span{opacity:1}
+.yr.on i{width:12px;top:33px}
+.tl-note{font-size:12.5px;margin-top:10px}
+
+/* passed */
+.passed{padding:64px 0 24px}
+.blocks{display:grid;gap:12px;margin-top:20px}
+.blk{color:#fff;border-radius:24px;padding:20px;display:flex;align-items:center;gap:12px;overflow:hidden;min-height:132px}
+.blk div{flex:1;min-width:0}
+.blk b{display:block;font-weight:500;font-size:22px;line-height:1.1}
+.blk p{font-size:14px;margin-top:6px}
+.blk img{height:108px;width:auto;flex:none}
+@media (min-width:640px){.blocks{grid-template-columns:1fr 1fr}}
+
+.src{font-size:12.5px;margin-top:22px}
+.more{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.chip{display:inline-flex;align-items:center;gap:6px;border-radius:99px;padding:7px 15px;font-size:13px;text-decoration:none;box-shadow:inset 0 0 0 1.5px var(--ink)}
+.chip.line{box-shadow:none;border-radius:0;padding:6px 0 4px;font-size:16px;border-bottom:2px solid var(--ink)}
+footer{padding:56px 0 calc(64px + env(safe-area-inset-bottom,0px));font-size:13px}
+@media (prefers-reduced-motion:reduce){.yr,.yr b,.yr i,.yr span{transition:none}}
+
+/* the better site's one font: TeX Gyre Heros (after the graphis masthead); titles lowercase and tight */
+.who h1{font-size:clamp(56px,15vw,120px);letter-spacing:-.045em;line-height:.9;text-transform:lowercase}
+.hdr b{text-transform:lowercase;letter-spacing:-.04em}
+.blk b{letter-spacing:-.02em}
+.blk b{font-family:"Anton",Arial,sans-serif;font-weight:400;letter-spacing:-.02em}
+</style>
+</head>
+<body>
+<header class="hdr"><div class="col"><b><img src="img/el-temp.png" alt="">SORA</b><a href="../">← Back to the site</a></div></header>
+
+<main class="col">
+  <section class="who" aria-labelledby="h-who">
+    <div class="eyebrow">THE DESIGNER</div>
+    <h1 id="h-who">ZENJI<br>FUNA&shy;BASHI</h1>
+    <div class="yrs">舟橋全二 · 1942–2023</div>
+    <p>Japanese illustrator and graphic designer. He cut flat shapes out of paper in bright, happy colours, and turned flowers, birds and fruit into signs.</p>
+    <div class="eyebrow" style="margin-top:44px">HIS WORK</div>
+    <div class="works">
+      <figure><img src="img/fz-estap.jpg" alt="Zenji Funabashi, E.S.T.a.P. magazine cover: a pink profile with a red flower and green leaves"><figcaption><b>E.S.T.a.P. no. 4</b>Magazine cover</figcaption></figure>
+      <figure><img src="img/fz-grapes.jpg" alt="Zenji Funabashi, GREEN cover: grapes in blues and green"><figcaption><b>GREEN · grapes</b>Magazine cover</figcaption></figure>
+      <figure><img src="img/fz-eggplants.jpg" alt="Zenji Funabashi, GREEN cover: lilac eggplants with green tops"><figcaption><b>GREEN · eggplants</b>Magazine cover</figcaption></figure>
+      <figure><img src="img/fz-peppers.jpg" alt="Zenji Funabashi, GREEN cover: yellow and red bell peppers"><figcaption><b>GREEN · peppers</b>Magazine cover</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="period" aria-labelledby="h-when">
+    <div class="eyebrow" id="h-when">WHEN AND WHERE</div>
+    <div class="tl" id="tl">
+      <div class="yr"><i></i><b>1942</b><span>Born in Kanagawa, Japan</span></div>
+      <div class="yr"><i></i><b>1965</b><span>Graduates in graphic design from Tama Art University, Tokyo</span></div>
+      <div class="yr"><i></i><b>1968</b><span>Wins a prize at the Nippon Design exhibition with a silkscreen print</span></div>
+      <div class="yr"><i></i><b>1970</b><span>Moves to Toronto: design studios, woodwork and silkscreen</span></div>
+      <div class="yr"><i></i><b>1977</b><span>San Francisco: cut-paper animation for Sesame Street</span></div>
+      <div class="yr"><i></i><b>1980</b><span>Back in Tokyo: freelance illustration, murals, reliefs and spaces; teaches illustration for 23 years</span></div>
+      <div class="yr"><i></i><b>2023</b><span>Dies in December, at 80</span></div>
+    </div>
+    <div class="tl-note">The year you're on grows, like NOW in the app.</div>
+  </section>
+
+  <section class="passed" aria-labelledby="h-passed">
+    <div class="eyebrow" id="h-passed">WHAT PASSED INTO SORA</div>
+    <div class="blocks">
+      <div class="blk" style="background:#3F90FF"><div><b>Cut paper</b><p>Flat shapes with clean edges. No gradients, no shadows, no outlines.</p></div><img src="img/el-temp.png" alt=""></div>
+      <div class="blk" style="background:#5F00FF"><div><b>His colour</b><p>A few bright, happy colours, always with one green.</p></div><img src="img/el-uv.png" alt=""></div>
+      <div class="blk" style="background:#FFB91F"><div><b>Nature as signs</b><p>A flower, suns, birds and waves tell the weather.</p></div><img src="img/el-wind.png" alt=""></div>
+      <div class="blk" style="background:#FF6ECB"><div><b>Paper that moves</b><p>From his animation work: the pieces fly in and land.</p></div><img src="img/el-rain.png" alt=""></div>
+    </div>
+    <p class="src">Sources: <a href="https://ja.wikipedia.org/wiki/%E8%88%9F%E6%A9%8B%E5%85%A8%E4%BA%8C" target="_blank" rel="noopener">Wikipedia (Japanese)</a> · <a href="https://aoyamajuku.jp/news/20240119181140/" target="_blank" rel="noopener">Illustration Aoyama Juku</a>. Covers: works by Zenji Funabashi, from my research.</p>
+    
+  </section>
+</main>
+<footer><div class="col">SORA · Design Noa Kaplan</div></footer>
+
+<script>
+(function(){
+  var ys=[].slice.call(document.querySelectorAll(".yr"));
+  function pick(){var mid=innerHeight*.5,best=0,bd=1e9;ys.forEach(function(y,i){var r=y.getBoundingClientRect(),d=Math.abs(r.top+r.height/2-mid);if(d<bd){bd=d;best=i;}});ys.forEach(function(y,i){y.classList.toggle("on",i===best)});}
+  addEventListener("scroll",pick,{passive:true});addEventListener("resize",pick);pick();
+})();
+</script>
+</body>
+</html>
