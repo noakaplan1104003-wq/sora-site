@@ -341,6 +341,48 @@ body{color:#000}
 .sys figcaption b{display:block;font-weight:700;font-size:14px;letter-spacing:-.01em}
 .sys .gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
 .sys .gal img{width:100%;height:auto;border-radius:14px;background:var(--paper)}
+/* typography system */
+.sys .tyb{font-family:Poppins;font-weight:700;letter-spacing:-.03em}
+.sys .tyr{font-family:Poppins;font-weight:500}
+.sys .tyface{display:flex;gap:22px;align-items:center;background:var(--paper);border-radius:20px;padding:20px 22px}
+.sys .tyface .aa{font:700 112px/.8 Poppins;letter-spacing:-.06em;flex:none}
+.sys .tymeta{display:flex;flex-direction:column;gap:4px;font-size:13px}
+.sys .tymeta b{font:700 24px/1.1 Poppins;letter-spacing:-.03em}
+.sys .tymeta span{opacity:.7}
+.sys .tyweights{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.sys .tyweights div{border-radius:18px;box-shadow:inset 0 0 0 1px var(--line);padding:16px}
+.sys .tyweights small{font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.6}
+.sys .tyweights p{font-size:30px;line-height:1.05;margin:8px 0 6px;letter-spacing:-.04em}
+.sys .tyweights span{font-size:12.5px;opacity:.7}
+.sys .tyglyphs{margin-top:12px;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.sys .tyglyphs p{font-size:22px;line-height:1.3;margin:0;word-break:break-all;letter-spacing:-.01em}
+.sys .tyrow{display:grid;grid-template-columns:1fr 1fr 1.3fr 1.6fr;gap:10px;align-items:center;padding:11px 0;border-bottom:1px solid var(--line);font-size:13px}
+.sys .tyrow.head{font-size:11px;letter-spacing:.06em;opacity:.6;text-transform:uppercase}
+.sys .tylive{margin-top:16px;display:grid;grid-template-columns:auto 1fr;gap:16px 22px;align-items:start}
+.sys .tyctl{grid-column:1/-1;display:flex;gap:14px;align-items:center;font-size:13px}
+.sys .tyctl input{margin:0;flex:1}
+.sys .tyctl b{font:700 15px Poppins;min-width:62px;text-align:right}
+.sys .typhone{container-type:inline-size;width:390px;max-width:100%;aspect-ratio:390/300;background:#fff;border-radius:26px;box-shadow:0 0 0 4px var(--ink);position:relative;overflow:hidden;color:#181918}
+.sys .tyh{position:absolute;left:7.2cqw;right:7.2cqw;top:8cqw;display:flex;justify-content:space-between}
+.sys .tyh .r,.sys .ddv .r{text-align:right}
+.sys .typhone .L{font:700 9.6cqw/1 Poppins;letter-spacing:-.045em}
+.sys .typhone .r .L{font-size:9.1cqw}
+.sys .typhone .S{font:700 5cqw/1 Poppins;margin-top:.6cqw}
+.sys .typhone .H{position:absolute;left:2.95cqw;top:31cqw;display:flex;align-items:center;gap:2.2cqw;font:500 4.5cqw/1 Poppins}
+.sys .typhone .H i{width:2cqw;height:.3cqw;background:#181918}
+.sys .tysizes{font-size:12.5px;line-height:1.7}
+.sys .tysizes b{font-weight:700}
+.sys .tyrules li{margin-bottom:10px}
+.sys .tyrules b{font-weight:700;letter-spacing:-.01em}
+.sys .tydd{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.sys .dd small{display:block;font-size:12.5px;margin-top:8px;line-height:1.35}
+.sys .dd small b{display:block;font-size:14px}
+.sys .dd.ok small b{color:#0b9e4a}.sys .dd.no small b{color:#FF2470}
+.sys .ddv{container-type:inline-size;display:flex;justify-content:space-between;background:#fff;border-radius:16px;padding:7% 7% 18%;box-shadow:inset 0 0 0 1px var(--line);color:#181918}
+.sys .dd.no .ddv{box-shadow:inset 0 0 0 2px #FF247055}
+.sys .ddv .L{font:700 13cqw/1 Poppins;letter-spacing:-.045em}
+.sys .ddv .S{font:700 6.5cqw/1 Poppins;margin-top:1cqw}
+@media (max-width:700px){.sys .tyrow{grid-template-columns:1fr 1fr;row-gap:2px}.sys .tyrow.head{display:none}.sys .tylive{grid-template-columns:1fr}.sys .tyface .aa{font-size:80px}.sys .tydd{grid-template-columns:1fr}}
 @media (max-width:400px){.sys .trio{grid-template-columns:1fr}.sys .trio div{min-height:0}}
 @media (max-width:820px){.sys{padding-top:80px}.sys .stabs{justify-content:flex-start}}
 </style>
@@ -395,11 +437,77 @@ body{color:#000}
       <!-- 3 -->
       <div class="ch" id="s-type">
         <h3><img src="el-uv.png" alt="">Typography</h3>
-        <div class="sub">One family: TeX Gyre Heros, after Helvetica, as in the Graphis masthead on Funabashi's cover. Bold for what you read, regular for the time. Everything in lowercase.</div>
-        <div class="tk"><span><code>type.large</code><br>9.6% of the width · bold · −0.045em</span><div class="t-large">today 28°</div></div>
-        <div class="tk"><span><code>type.small</code><br>5% of the width · bold</span><div class="t-small">23/11 · temp</div></div>
-        <div class="tk"><span><code>type.hand</code><br>4.5% of the width · regular</span><div class="t-hand">— now · 16:00</div></div>
-        <div class="tk"><span>Logotype<br>Heros bold · −0.045em</span><div class="t-logo">sora</div></div>
+        <div class="sub">One family, two weights, three sizes. The type stays quiet so the shape can speak.</div>
+
+        <!-- 3.1 the family -->
+        <div class="tyface">
+          <div class="aa">Aa</div>
+          <div class="tymeta">
+            <b>TeX Gyre Heros</b>
+            <span>After Helvetica · GUST e-foundry · free licence (GFL)</span>
+            <span>Chosen after the Graphis 226 masthead on Funabashi's cover: a plain grotesque beside flat, bright shapes.</span>
+          </div>
+        </div>
+        <div class="tyweights">
+          <div><small>Bold · 700</small><p class="tyb">what you read</p><span>The day, the number, the word, titles</span></div>
+          <div><small>Regular · 500</small><p class="tyr">what you do</p><span>The time handle, body text, captions</span></div>
+        </div>
+        <div class="tyglyphs">
+          <p class="tyb">abcdefghijklmnopqrstuvwxyz</p>
+          <p class="tyb">0123456789 ° % / · → km/h</p>
+          <p class="tyr">abcdefghijklmnopqrstuvwxyz 0123456789</p>
+        </div>
+
+        <!-- 3.2 the app scale -->
+        <h4>The app: three sizes</h4>
+        <p class="note" style="margin-bottom:14px">Sizes are a share of the screen's width (cqw), so the header looks the same on every phone. Pixels below are for a 390 px phone.</p>
+        <div class="tyrow head"><span>token</span><span>size</span><span>weight · tracking · line</span><span>used for</span></div>
+        <div class="tyrow"><code>type.large</code><span>9.6% · 37 px</span><span>bold · −0.045em · 1</span><span>today, the number (9.1%)</span></div>
+        <div class="tyrow"><code>type.small</code><span>5% · 19.5 px</span><span>bold · 0 · 1</span><span>23/11, temp, uv, wind, rain</span></div>
+        <div class="tyrow"><code>type.hand</code><span>4.5% · 17.5 px</span><span>regular · 0 · 1</span><span>now, 16:00</span></div>
+
+        <div class="box tylive">
+          <div class="tyctl"><span>Phone width</span><input type="range" id="tyw" min="320" max="430" value="390" aria-label="Phone width"><b id="tywv">390 px</b></div>
+          <div class="typhone" id="typh">
+            <div class="tyh">
+              <div><div class="L">today</div><div class="S">23/11</div></div>
+              <div class="r"><div class="L">28°</div><div class="S">temp</div></div>
+            </div>
+            <div class="H"><i></i>now</div>
+          </div>
+          <div class="tysizes" id="tysz"></div>
+        </div>
+
+        <!-- 3.3 the site scale -->
+        <h4>The site: the same family, larger</h4>
+        <div class="tyrow head"><span>role</span><span>size</span><span>weight · tracking · line</span><span>sample</span></div>
+        <div class="tyrow"><span>Display</span><span>7.6vw · 50–112 px</span><span>bold · −0.045em · .95</span><span class="tyb" style="font-size:30px;letter-spacing:-.045em">the sky in one shape</span></div>
+        <div class="tyrow"><span>Section title</span><span>4.2vw · 32–58 px</span><span>bold · −0.045em · .95</span><span class="tyb" style="font-size:24px;letter-spacing:-.045em">how it works</span></div>
+        <div class="tyrow"><span>Card title</span><span>22 px</span><span>bold · −0.03em · 1.15</span><span class="tyb" style="font-size:20px;letter-spacing:-.03em">the flower</span></div>
+        <div class="tyrow"><span>Lead</span><span>18 px</span><span>regular · 0 · 1.55</span><span class="tyr" style="font-size:16px">One look, and you know the day.</span></div>
+        <div class="tyrow"><span>Body</span><span>16 px</span><span>regular · 0 · 1.55</span><span class="tyr" style="font-size:14px">Flat, like cut paper.</span></div>
+        <div class="tyrow"><span>Label</span><span>13 px</span><span>regular · +0.14em · caps</span><span class="tyr" style="font-size:12px;letter-spacing:.14em">SYSTEM BOOK</span></div>
+
+        <!-- 3.4 rules -->
+        <h4>Rules</h4>
+        <ol class="use tyrules">
+          <li><b>Lowercase.</b> Everything is lowercase. The only capitals are the small tracked labels on the site.</li>
+          <li><b>Large beside large, small beside small.</b> The day sits beside the number; the date sits beside the word.</li>
+          <li><b>The number is as big as the day.</b> It is the reading, so it never shrinks to a detail.</li>
+          <li><b>Tight when big, open when small.</b> −0.045em for large and titles; no tracking for small.</li>
+          <li><b>Two weights only.</b> Bold for what you read, regular for what you do.</li>
+          <li><b>Corners, not centre.</b> Type sits in the top corners; the middle belongs to the shape.</li>
+          <li><b>Ink, not colour.</b> #181918 by day, #F2F1EC by night. Colour is only for shapes.</li>
+        </ol>
+
+        <!-- 3.5 do / don't -->
+        <h4>Do and don't</h4>
+        <div class="tydd">
+          <div class="dd ok"><div class="ddv"><div><div class="L">today</div><div class="S">23/11</div></div><div class="r"><div class="L">28°</div><div class="S">temp</div></div></div><small><b>Do</b>Two pairs, two sizes, lowercase</small></div>
+          <div class="dd no"><div class="ddv"><div><div class="L" style="text-transform:uppercase;letter-spacing:.02em">TODAY</div><div class="S" style="text-transform:uppercase">23/11</div></div><div class="r"><div class="L">28°</div><div class="S" style="text-transform:uppercase">TEMP</div></div></div><small><b>Don't</b>Capitals: they shout over the shape</small></div>
+          <div class="dd no"><div class="ddv"><div><div class="L">today</div><div class="S">23/11</div></div><div class="r"><div class="S" style="font-size:12px">28°</div><div class="S">temp</div></div></div><small><b>Don't</b>A small number: the reading gets lost</small></div>
+          <div class="dd no"><div class="ddv"><div><div class="L" style="font-weight:500">today</div><div class="S" style="font-style:italic">23/11</div></div><div class="r"><div class="L" style="color:#FF2470">28°</div><div class="S">temp</div></div></div><small><b>Don't</b>New weights, italics or coloured type</small></div>
+        </div>
       </div>
 
       <!-- 4 -->
@@ -523,6 +631,11 @@ body{color:#000}
   });
   app.addEventListener("load",function(){var d=doc();if(!d)return;try{new MutationObserver(function(){paint()}).observe(d.body,{childList:true,subtree:true});}catch(e){}});
 
+
+  /* typography: the header at any phone width */
+  var tyw=document.getElementById("tyw"),typh=document.getElementById("typh"),tysz=document.getElementById("tysz"),tywv=document.getElementById("tywv");
+  function tyUpd(){var w=+tyw.value;typh.style.width=w+"px";tywv.textContent=w+" px";var r=function(p){return (w*p/100).toFixed(1)+" px"};tysz.innerHTML="<b>type.large</b> "+r(9.6)+" · number "+r(9.1)+"<br><b>type.small</b> "+r(5)+"<br><b>type.hand</b> "+r(4.5)+"<br><span style='opacity:.6'>Slide: the sizes follow the width, the layout never changes.</span>";}
+  tyw.addEventListener("input",tyUpd);tyUpd();
   var sd=document.getElementById("sd"),SH={sun:["d-sun.jpg","The suns · 26° and up"],flower:["d-flower.jpg","The flower · 21–25°"],birds:["d-birds.jpg","The birds · 15–20°"],rain:["d-rain.jpg","The waves · 14° and below"]};
   function kindOf(t){return t>=26?"sun":t>=21?"flower":t>=15?"birds":"rain";}
   function upd(){var t=+sd.value,k=SH[kindOf(t)],im=document.getElementById("sd-img");document.getElementById("sd-t").textContent=t;if(im.getAttribute("src")!==k[0]){im.src=k[0];im.alt=k[1];}document.getElementById("sd-n").textContent=k[1];}
